@@ -31,7 +31,7 @@ def graphColoring_BackTracking(graph):
     m = 1
     while True:
         if colorGraph(m, vertexColors, graph, 0) == True:
-            return True
+            return m
             print(vertexColors)
         else:
             m += 1
@@ -42,4 +42,4 @@ def graphColoring_BackTracking(graph):
 # input variables
 graph = [[0, 1, 1, 1, 1], [1, 0, 1, 0, 1], [1, 1, 0, 1, 0], [1, 0, 1, 0, 1], [1, 0, 1, 1, 0]]
 
-graphColoring_BackTracking(graph)
+print(graphColoring_BackTracking(graph))
