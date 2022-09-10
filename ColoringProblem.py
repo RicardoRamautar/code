@@ -29,9 +29,9 @@ def graphColoring_BackTracking(graph):
 
     solution = False
     m = 1
-    while solution == False:
+    while True:
         if colorGraph(m, vertexColors, graph, 0) == True:
-            solution = True
+            return True
             print(vertexColors)
         else:
             m += 1
