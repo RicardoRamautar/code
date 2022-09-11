@@ -23,16 +23,16 @@ def colorGraph(m, vertexColors, graph, vIdx):
                 return True
 
             vertexColors[vIdx] = 0
+    colorGraph(m, vertexColors, graph, vIdx+1)
 
 def graphColoring_BackTracking(graph):
     vertexColors = [0 for i in range(len(graph))]        # initialize array storing colors of Vertices
 
-    solution = False
-    m = 1
+    m = 2
     while True:
         if colorGraph(m, vertexColors, graph, 0) == True:
-            return m
             print(vertexColors)
+            return m
         else:
             m += 1
             
@@ -40,6 +40,8 @@ def graphColoring_BackTracking(graph):
 
 
 # input variables
-graph = [[0, 1, 1, 1, 1], [1, 0, 1, 0, 1], [1, 1, 0, 1, 0], [1, 0, 1, 0, 1], [1, 0, 1, 1, 0]]
+# graph = [[0, 1, 1, 1, 1], [1, 0, 1, 0, 1], [1, 1, 0, 1, 0], [1, 0, 1, 0, 1], [1, 0, 1, 1, 0]]
+graph = [[0, 1, 1, 1], [1, 0, 1, 0], [1, 1, 0, 1], [1, 0, 1, 0]]
+# graph = [[0, 1, 1, 1, 1, 0], [1, 0, 1, 0, 1, 1], [1, 1, 0, 1, 0, 1], [1, 0, 1, 0, 1, 0], [1, 0, 1, 1, 0, 1], [0, 1, 1, 1, 1, 0]]
 
 print(graphColoring_BackTracking(graph))
