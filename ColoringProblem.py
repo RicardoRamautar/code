@@ -1,5 +1,3 @@
-# functions
-
 def isPossible(vIdx, vertexColors, i, graph, nrVertices):
     for j in range(nrVertices):
         if graph[vIdx][j] == 1 and vertexColors[j] == i:
@@ -35,8 +33,6 @@ def graphColoring_BackTracking(graph):
             
     
 
-
-# input variables
 # graph = [[0, 1, 1, 1, 1], [1, 0, 1, 0, 1], [1, 1, 0, 1, 0], [1, 0, 1, 0, 1], [1, 0, 1, 1, 0]]
 # graph = [[0, 1, 1, 1], [1, 0, 1, 0], [1, 1, 0, 1], [1, 0, 1, 0]]
 graph = [[0, 1, 1, 1, 1, 0], [1, 0, 1, 0, 1, 1], [1, 1, 0, 1, 0, 1], [1, 0, 1, 0, 1, 0], [1, 1, 1, 1, 0, 1], [0, 1, 1, 0, 1, 0]]
